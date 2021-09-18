@@ -1,4 +1,5 @@
 import 'package:facebook_clone/config/palette.dart';
+import 'package:facebook_clone/data/data.dart';
 import 'package:facebook_clone/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,10 +31,11 @@ class HomeScreen extends StatelessWidget {
               CircleButton(
                   icon: FontAwesomeIcons.facebookMessenger,
                   iconSize: 30,
-                  onPressed: () {
-                    print('Messenger');
-                  })
+                  onPressed: () {})
             ],
+          ),
+          SliverToBoxAdapter(
+            child: CreatePostContainer(currentUser:currentUser)
           )
         ],
       ),
