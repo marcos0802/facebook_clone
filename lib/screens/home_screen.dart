@@ -1,5 +1,6 @@
 import 'package:facebook_clone/config/palette.dart';
 import 'package:facebook_clone/data/data.dart';
+import 'package:facebook_clone/models/models.dart';
 import 'package:facebook_clone/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,11 +32,31 @@ class HomeScreen extends StatelessWidget {
               CircleButton(
                   icon: FontAwesomeIcons.facebookMessenger,
                   iconSize: 30,
-                  onPressed: () {})
+                  onPressed: () {
+                    //?print('TODO: messenger');
+                  })
             ],
           ),
           SliverToBoxAdapter(
-            child: CreatePostContainer(currentUser:currentUser)
+              child: CreatePostContainer(currentUser: currentUser)),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+            sliver: SliverToBoxAdapter(
+              child: Rooms(onlineUsers: onlineUsers),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+            sliver: SliverToBoxAdapter(
+              child: Stories(currentUser: currentUser,stories: stories),
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index){
+              final Post post = posts[index];
+              return PostContainer(post:post);
+            },childCount: posts.length)
+            
           )
         ],
       ),

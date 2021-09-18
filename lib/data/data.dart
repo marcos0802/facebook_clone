@@ -209,7 +209,7 @@ final List<Post> posts = [
     caption:
         'More placeholder text for the soul: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     timeAgo: '1d',
-    imageUrl: 'null',
+    imageUrl: '',
     likes: 482,
     comments: 37,
     shares: 9,
