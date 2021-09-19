@@ -41,10 +41,12 @@ class CustomAppBar extends StatelessWidget {
           ),
           SizedBox(
             width: 600.0,
+            height: double.infinity,
             child: CustomTabBar(
               icons: icons,
               selectedIndex: selectedIndex,
               onTap: onTap,
+              isBottomIndicator: true,
             ),
           ),
           Expanded(
@@ -55,8 +57,12 @@ class CustomAppBar extends StatelessWidget {
               const SizedBox(
                 width: 12.0,
               ),
-              CircleButton(icon: Icons.search, iconSize: 30.0, onPressed: (){}),
-              CircleButton(icon: FontAwesomeIcons.facebookMessenger, iconSize: 30.0, onPressed: (){})
+              CircleButton(
+                  icon: Icons.search, iconSize: 30.0, onPressed: () {}),
+              CircleButton(
+                  icon: FontAwesomeIcons.facebookMessenger,
+                  iconSize: 30.0,
+                  onPressed: () {})
             ],
           ))
         ],

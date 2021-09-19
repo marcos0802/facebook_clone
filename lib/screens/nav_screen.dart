@@ -26,7 +26,7 @@ class _NavScreenState extends State<NavScreen> {
     Icons.home,
     Icons.ondemand_video,
     FontAwesomeIcons.userCircle,
-    Icons.groups,
+   FontAwesomeIcons.users,
     Icons.notifications_none_outlined,
     Icons.menu
   ];
